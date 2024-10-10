@@ -26,4 +26,30 @@ Duración: 60 minutos
 
 Debes seguir todos los pasos proporcionados *antes* de realizar el laboratorio práctico.
 
+## Arquitectura de la solución
 
+La aplicación SmartHotel está compuesta por 4 VMs alojadas en Hyper-V:
+
+- **Database tier** Alojada en la VM smarthotelSQL1, que se ejecuta sobre Windows Server 2016 y SQL Server 2017.
+
+- **Web tier** Alojada en la VM smarthotelweb1, que se ejecuta sobre Windows Server 2012R2.
+
+- **Application tier** Alojada en la VM smarthotelweb2, que se ejecuta sobre Windows Server 2012R2.
+
+- **Web proxy** Alojada en la VM UbuntuWAF, que se ejecuta con Nginx sobre Ubuntu 18.04 LTS.
+
+Por motivos de simplicidad, no hay redundancia en ninguno de los tiers.
+
+>**Nota:** Por conveniencia, el host de Hyper-V mismo está desplegado en una VM en Azure. Para propósitos del laboratorio, vamos a pensar en él como si fuese una máquina on-premises.
+
+![A slide shows the on-premises SmartHotel application architecture. This comprises a SmartHotelHost server running Microsoft Hyper-V. This server hosts 4 VMs: UbuntuWAF, SmartHotelWeb1, SmartHotelWeb2, and SmartHotelSQL1. A series of arrows show how these VMs will be migrated to Azure. The first 3 VMs have an arrow labeled 'Azure Migrate: Server Migration' pointing to 3 similarly-labeled VMs in Azure. The last VM, SmartHotelSQL1, has an arrow labeled 'Azure Database Migration Service' pointing to an Azure SQL Database. A third arrow labeled 'Azure Migrate: Server Assessment' and 'Data Migration Assistant (DMA)' points from all 4 on-premises VMs to an Azure Migrate dashboard showing migration readiness.](imagenes/overview.png "Overview de la migración de SmartHotel")
+
+## Información importante
+
+Las credenciales de todas las máquinas están configuradas con los datos a continuación.
+
+- **Usuario** demouser
+
+- **Contraseña** demo!pass123
+
+>**Nota:** Puedes reemplazar las credenciales pre-configuradas con tus propias credenciales; sin embargo, te recomendamos que las anotes aparte para no olvidarlas.
