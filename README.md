@@ -25,3 +25,5 @@ Duración: 60 minutos
     > **Nota:** Si no se muestra la aplicación SmartHotel, espera 10 minutos y vuelve a intentarlo. Requiere **al menos 1 hora** desde el inicio de la implementación de la plantilla. También puedes comprobar los niveles de actividad de CPU, red y disco de la máquina virtual SmartHotelHost en el portal de Azure para ver si el aprovisionamiento sigue activo.
 
 Debes seguir todos los pasos proporcionados *antes* de realizar el laboratorio práctico.
+
+
